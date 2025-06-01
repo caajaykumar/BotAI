@@ -2,10 +2,6 @@ import { Box, Stack, Typography } from '@mui/material';
  import InitialChat from '../../Components/InitialChat/InitialChat';
 import ChatInput from '../../Components/ChatInput/ChatInput';
 
-// import ChatHistoryCard from '../../Components/ChatHistoryCard/ChatHistoryCard';
-
-// import FeedbackModal from '../../components/FeedbackModal/FeedbackModal';
-// import FeedbackModl from '../../Components/FeedbackModal/FeedbackModal'
 import { useEffect, useRef, useState } from 'react';
 import data from '../../aiData/sampleData.json'
 import { useOutletContext } from "react-router-dom";
@@ -14,6 +10,8 @@ import { ThemeContext } from '../../theme/ThemeContext';
 import { useContext } from 'react';
 import ChattingCard from '../../Components/ChattingCard/ChattingCard';
 import FeedbackModal from '../../Components/FeedbackModal/FeedbackModal';
+import Navbar from '../../Components/Navbar/Navbar';
+
 
 export default function Home() {
 
@@ -71,7 +69,7 @@ export default function Home() {
             }}
         >
 
-           
+            <Navbar/>
 
             {chat.length == 0 && <InitialChat generateResponse={generateResponse} />}
 
